@@ -1,0 +1,26 @@
+{
+  "name": "blockchainproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/necil/blockchainproject.git"
+  },
+  "author": "cikichain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/necil/blockchainproject/issues"
+  },
+  "homepage": "https://github.com/necil/blockchainproject#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.1",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "redis": "^2.7.1"
+  }
+}
