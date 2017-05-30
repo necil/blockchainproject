@@ -1,19 +1,24 @@
 'use strict'
 
 var express = require('express');
+var web3 = global.contract;
+exports.getAdmin = function(req, res){
+	res.send(contract.getAdmin());
+}
 
-exports.listAllPackages = function(req, res){
-  res.send('zaa');
+exports.giveOffer = function(req, res){
+	contract.giveOffer(req.body.offer)
+  	res.send("ok")
 }
 
 exports.createOffer = function(req, res){
-  res.send('zaa');
+  	res.send('zaa');
 }
 
 exports.extendPackage = function(req, res){
-  res.send('zaa');
+  	res.send('zaa');
 }
 
-exports.changePackage = function(req, res){
-  res.send('zaa');
+exports.selectOffer = function(req, res){
+	res.send('zaa');
 }
