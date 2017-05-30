@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-app="mainApp" ng-controller="mainControler">
+    <div class="container">
+      <div class="panel panel-default" ng-show="userAuthority == 1">
+        <div class="panel-heading">
+          <h3 class="panel-title">Admin menu</h3>
+        </div>
+        <div class="alert alert-success" ng-show="infoText" ng-bind="infoText"></div>
+        <div class="panel-body">
+          <h4>Get Admin</h4>
+          <div class="well well-sm">
+            <p>
+              Admin Address: <span ng-bind="adminAddress"></span>
+            </p>
+            <button type="submit" ng-click="getAdminAddress()" class="btn btn-default">Get Admin</button>
+          </div>
+          <h4>Add Hospital</h4>
+          <div class="well well-sm">
+            <div class="form-group">
+              <label for="hospital-address">Hospital Address</label>
+              <input type="text" ng-model="hospitalAdd" class="form-control" id="hospital-address" placeholder="">
+            </div>
+            <button type="button" class="btn btn-default" ng-click="addHospital()" name="button">Add Hospital</button>
+          </div>
+
+          <h4>List Hospitals</h4>
+          <div class="well well-sm">
+            <button type="button" class="btn btn-default" ng-click="getHospitals()" name="button">Add Hospital</button>
+            <ul class="list-group" ng-show="hospitals">
+              <li class="list-group-item" ng-repeat="hospital in hospitals">{{hospital}}</li>
+            </ul>
+          </div>
+
+
+          <h4>List Hospitals</h4>
+          <div class="well well-sm">
+            <button type="button" class="btn btn-default" ng-click="getHospitals()" name="button">Add Hospital</button>
+            <ul class="list-group" ng-show="hospitals">
+              <li class="list-group-item" ng-repeat="hospital in hospitals">{{hospital}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default"  ng-show="userAuthority == 3">
+        <div class="panel-heading">
+          <h3 class="panel-title">Patient Menu</h3>
+        </div>
+        <div class="panel-body">
+
+        </div>
+      </div>
+      <div class="panel panel-default"  ng-show="userAuthority == 2">
+        <div class="panel-heading">
+          <h3 class="panel-title">Hospital Menu</h3>
+        </div>
+        <div class="panel-body">
+
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="/js/mainController.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
